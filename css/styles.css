@@ -226,6 +226,7 @@ h2 {
 	background: none;
 }
 .navbar-toggle {
+	margin: 17px;
 }
 .addBg {
 background: #000 !important;
@@ -239,6 +240,7 @@ box-shadow: 0px 3px 4px 0px rgba(50, 50, 50, 0.38);
 	border-bottom: 4px solid #5887FF;
 }
 .carousel-inner > .item {
+	height: 500px;
 }
 .carousel-caption {
 	padding: 0px;
@@ -412,26 +414,48 @@ margin:0 6px;
 .banner-content .social-icons a i{
 font-size:26px;
 }
+
 .banner-content .social-icons a:hover {
 background:#5887FF;
 color:#fff;
 border: 1px solid #5887FF;
 }
+.hireMe {
+	background: #fff;
+	clear: right;
+	margin: 0 auto;
+	display: block;
+	text-align: center;
+	width: 90px;
+	color: #000;
+	padding: 8px 5px;
+	margin-top: 25px;
+	position: relative;
+}
 .banner-content .hireMe:hover{
 background:#5887FF;
 color:#fff;
 }
-.banner-content .hireMe{
-background: #fff;
-clear: right;
-margin: 0 auto;
-display: block;
-text-align: center;
-width: 90px;
-color:#000;
-padding:8px 5px;
-margin-top:25px;
-}
+.banner-content .hireMe::before{
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(45deg, #5887FF, #f8f5f5, #0621bd, #3abefc);
+	background-size: 800%;
+	border-radius: 10px;
+	filter: blur(8px);
+	animation: glowing 20s linear infinite;
+	}
+	
+	@keyframes glowing {
+	0% {background-position: 0 0;}
+	50% {background-position: 400% 0;}
+	100% {background-position: 0 0;}
+	}
 .banner-content header  h1{
  text-align:center;
  margin: 0;
